@@ -2,7 +2,7 @@
 ## 📚Table of Contents
 - [Exploring Pick % and Ban % Correlation](#-exploring-pick--and-ban--correlation)
 - [Exploring Win % and Ban % Correlation](#-exploring-win--and-ban--correlation)
-- [What Traits Distinguish Champion Win Rates?](#-what-traits-distinguish-champion-win-rates)
+- [Champion Scores Relationship with Win % ?](#-champion-scores-relationship-with-win--)
 
 ***
 ## 📌 Exploring `Pick %` and `Ban %` Correlation
@@ -110,7 +110,7 @@ The Pearson Coefficiant Correlation is *r* = 0.09024683. This indicates a really
 The plot supports the findings. Since the correlation is positive, there is a slight upward trend but the line of best fit is relatively flat considering the correlation is weak, almost 0, with data points fairly dispersed. 
 
 ***
-## 📌 What Traits Distinguish Champion Win Rates?
+## 📌 Champion Scores Relationship with Win % ?
 
 High `Tier` champions are expected to have higher `Win %`. Let's check if this is true:
 
@@ -134,7 +134,7 @@ Champions in A tier, and B tier have higher win averages despite God tier and S 
 
 <img width="698" alt="Screenshot 2024-12-15 at 11 00 33 PM" src="https://github.com/user-attachments/assets/d8ec3761-e8a4-4cec-a8d9-a3361f67f45f" /> <space>
 
-Average `Scores`, `Ban %`, `Pick %`, decrease as `Tiers` decrease; average `Win %` is not influenced from this decrease. Let's analyze further: 
+Average `Score`, `Ban %`, `Pick %`, decrease as `Tiers` decrease; average `Win %` is not influenced from this decrease. Let's analyze further: 
 
 ```sql
 SELECT 
@@ -142,13 +142,41 @@ SELECT
     Class, 
     Role, 
     AVG(`Win %`) AS avg_win
-FROM `league_of_legends_champion_stats _13_13`
+FROM `league_of_legends_champion_stats_13_13`
 GROUP BY Tier, Class, Role
 ORDER BY avg_win DESC
 `````
 Output of the top data:
 
 <img width="283" alt="Screenshot 2024-12-15 at 11 05 41 PM" src="https://github.com/user-attachments/assets/182e8708-d640-4673-aed4-781c0ea449eb" /> <space>
+
+A tier ADC mages hold the highest average wins in ranked games in patch 13.3; this is an off-meta role for mages. Considering a marksman, fighter, and support champion hold the top 3 highest `Score` in patch 13.3, let's see if these classes have the highest average `Win %`. Using 51% as the threshold...
+
+```sql
+WITH class_data AS (
+    SELECT 
+        Tier, 
+        Class, 
+        Role, 
+        AVG(`Win %`) AS avg_win
+    FROM `league_of_legends_champion_stats _13_13`
+    GROUP BY Tier, Class, Role
+) 
+SELECT 
+    Class, 
+    COUNT(*) AS class_count
+FROM class_data
+WHERE avg_win > 51
+GROUP BY Class
+ORDER BY class_count DESC;
+`````
+
+Output:
+
+<img width="101" alt="Screenshot 2024-12-15 at 11 14 39 PM" src="https://github.com/user-attachments/assets/7be3ef03-2c0c-4c7c-bfd8-4b3414a95d48" /> <space>
+
+Champions with average `Win %` are mainly tanks and mages, with no assasin champions making the threshold; ADC role having the highest `Win %` average for mages, and the support role for tanks. 
+
 
 
 
