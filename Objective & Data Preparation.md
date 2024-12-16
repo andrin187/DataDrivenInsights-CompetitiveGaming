@@ -50,7 +50,8 @@ FROM `league_of_legends_champion_stats_13_13`
 LIMIT 30
 `````
 
-<img width="508" alt="Screenshot 2024-12-15 at 8 58 12 PM" src="https://github.com/user-attachments/assets/f458c113-e073-49a9-a852-e870bc3f3268" />
+<img width="518" alt="Screenshot 2024-12-16 at 1 05 53 AM" src="https://github.com/user-attachments/assets/fb56d985-184d-4b85-aa5c-6eb5fabbf52a" />
+
 
 ***
  
