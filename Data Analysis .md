@@ -36,8 +36,8 @@ COUNT(*) AS n,
 SUM(`Pick %`) AS sum_x,
 SUM(`Ban %`) AS sum_y, 
 SUM(XY) AS sum_xy,
-SUM(YSQUARED) as sum_ysquared,
-SUM(XSQUARED) as sum_xsquared
+SUM(YSQUARED) AS sum_ysquared,
+SUM(XSQUARED) AS sum_xsquared
 FROM correlation;
 `````
 Output:
@@ -91,8 +91,8 @@ COUNT(*) AS n,
 SUM(`Win %`) AS sum_x,
 SUM(`Ban %`) AS sum_y, 
 SUM(XY) AS sum_xy,
-SUM(YSQUARED) as sum_ysquared,
-SUM(XSQUARED) as sum_xsquared
+SUM(YSQUARED) AS sum_ysquared,
+SUM(XSQUARED) AS sum_xsquared
 FROM correlation
 `````
 Output:
