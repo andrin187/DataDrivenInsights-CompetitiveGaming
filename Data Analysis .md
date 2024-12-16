@@ -1,7 +1,7 @@
 # 🎮 DataDrivenInsights-CompetitiveGaming
 ## 📚Table of Contents
-- [Exploring Pick % and Ban % Correlation](https://github.com/andrin187/DataDrivenInsights-CompetitiveGaming/edit/main/Data%20Analysis%20.md#-exploring-pick--and-ban--correlation)
-- [other](https://github.com/andrin187/DataDrivenInsights-CompetitiveGaming/edit/main/Data%20Analysis%20.md#-exploring-win--and-ban--correlation)
+- [Exploring Pick % and Ban % Correlation](#-📌-exploring-`pick-%`-and-`ban-%`-correlation)
+- [other]
 
 ***
 ## 📌 Exploring `Pick %` and `Ban %` Correlation
