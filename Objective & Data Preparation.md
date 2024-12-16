@@ -7,7 +7,7 @@ In this project I want to ask the three following questions:
 
 - What is ban rates impact on win rates? Is there a correlation between the two variables? Do champions with higher ban rates have higher win rates?
 
-- What traits distinguish champions with higher win rates from those with lower win rates? 
+- What is the relationship between a champions score with their win rate? Is the hypothesis that a higher score equals a higher win rate true?
 
 ***
 
