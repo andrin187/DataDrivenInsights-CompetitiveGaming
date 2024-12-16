@@ -205,7 +205,7 @@ Output:
 It can be seen that champions that hold the highest average `Win %` are champions in off-meta roles; champions that have high `Win %` despite having relatively low overall scores. 
 
 ***
-Now that the analysis is complete, here are the conclusions that can be derived from the analysis: [Conclusions](https://github.com/andrin187/DataDrivenInsights-CompetitiveGaming/blob/edb11db2dd5771e54b6d474fb4f16b94982730b9/Findings%20%26%20Conclusions%20.md)
+Now that the analysis is complete, here are the conclusions that can be derived from the analysis: [Conclusions](https://github.com/andrin187/DataDrivenInsights-CompetitiveGaming/blob/main/Findings%20%26%20Conclusions%20.md)
 ***
 
 
