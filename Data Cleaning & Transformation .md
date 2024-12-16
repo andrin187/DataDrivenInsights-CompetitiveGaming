@@ -12,7 +12,7 @@ FROM `league_of_legends_champion_stats_13_13`
 
 <sub><sup>❗This dataset contains 247 unique rows of champion statistics. The above image only contains a small percentage of the data within the dataset. </sub></sup>
 
-The dataset looks complete containing information on champion win % and ban % which will be useful for the analysis. No null or duplicate values within the data. 
+The dataset looks complete containing information on champion `Win %` and `Ban %` which will be useful for the analysis. No null or duplicate values within the data. 
 
 Important to note that some champions contain more than one statistic correlating to different roles due to champion flexibility or ‘off-meta’ gameplay. Off-meta gameplay can be influenced by champions performing better outside of their designated roles. Eg. Pantheon, a flexible fighter that is popularily played within these 3 different roles:
 
