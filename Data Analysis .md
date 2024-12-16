@@ -93,7 +93,7 @@ SUM(`Ban %`) AS sum_y,
 SUM(XY) AS sum_xy,
 SUM(YSQUARED) AS sum_ysquared,
 SUM(XSQUARED) AS sum_xsquared
-FROM correlation
+FROM correlation;
 `````
 Output:
 
