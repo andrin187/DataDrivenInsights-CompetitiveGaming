@@ -3,7 +3,7 @@
 ## 📚Table of Contents
 - [Exploring Pick % and Ban % Correlation](#-exploring-pick--and-ban--correlation)
 - [Exploring Win % and Ban % Correlation](#-exploring-win--and-ban--correlation)
-- [Champion Scores Relationship with Win % ?](#-champion-scores-relationship-with-win--)
+- [Champion Scores Relationship with Win %](#-champion-scores-relationship-with-win--)
 
 ***
 ## 📌 Exploring `Pick %` and `Ban %` Correlation
