@@ -112,7 +112,7 @@ The plot supports the findings. Since the correlation is positive, there is a sl
 ***
 ## 📌 Champion Scores Relationship with Win % ?
 
-High `Tier` champions are expected to have higher `Win %`. Let's check if this is true:
+High `Tier` champions have higher `Scores` and are therefore expected to have higher `Win %`. Let's check if this is true:
 
 ```sql
 SELECT 
@@ -175,7 +175,7 @@ Output:
 
 <img width="101" alt="Screenshot 2024-12-15 at 11 14 39 PM" src="https://github.com/user-attachments/assets/7be3ef03-2c0c-4c7c-bfd8-4b3414a95d48" /> <space>
 
-Champions with average `Win %` are mainly tanks and mages, with no assasin champions making the threshold; ADC role having the highest `Win %` average for mages, and the support role for tanks. 
+Champions with the highest average `Win %` are mainly tanks and mages, with no assasin champions making the threshold; ADC role having the highest `Win %` average for mages, and the support role for tanks. 
 
 
 
