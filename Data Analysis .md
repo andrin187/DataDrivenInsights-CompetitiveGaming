@@ -1,7 +1,8 @@
 # 🎮 DataDrivenInsights-CompetitiveGaming
 ## 📚Table of Contents
-- [Exploring Pick % and Ban % Correlation](#-exploring-`pick-%`-and-`ban-%`-correlation)
+- [Exploring Pick % and Ban % Correlation](#-exploring-pick--and-ban--correlation)
 - [Exploring Win % and Ban % Correlation](#-exploring-win--and-ban--correlation)
+- [What Traits Distinguish Champion Win Rates?](#what-traits-distinguish-champion-win-rates)
 
 ***
 ## 📌 Exploring `Pick %` and `Ban %` Correlation
@@ -109,6 +110,7 @@ The Pearson Coefficiant Correlation is *r* = 0.09024683. This indicates a really
 The plot supports the findings. Since the correlation is positive, there is a slight upward trend but the line of best fit is relatively flat considering the correlation is weak, almost 0, with data points fairly dispersed. 
 
 ***
+## 📌 What Traits Distinguish Champion Win Rates?
 
 
 
