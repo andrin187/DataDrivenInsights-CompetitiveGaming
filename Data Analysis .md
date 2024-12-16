@@ -1,4 +1,8 @@
 # 🎮 DataDrivenInsights-CompetitiveGaming
+## 📚Table of Contents
+- [Exploring Pick % and Ban % Correlation](https://github.com/andrin187/DataDrivenInsights-CompetitiveGaming/edit/main/Data%20Analysis%20.md#-exploring-pick--and-ban--correlation)
+
+***
 ## 📌 Exploring `Pick %` and `Ban %` Correlation
 
 To explore the correlation between these two variables the Pearson Correlation Coefficiant will be utilized. The coefficiant will be able to assess the degree of association between the two variables. Here is the formula that will be utilized: 
@@ -40,7 +44,7 @@ Output:
 
 Plugging the following values into the formula we get the following Pearson Correlation Coefficient, *r* = 0.4814065.  Thus, there is a moderate positive relationship (0.3< *r* <0.5) between pick rates and ban rates; champions with high pick rates tend to have higher ban rates.
 
-A useful way to visualize this relationship can be done using R Statistics:
+A useful way to visualize this relationship can be done using R Statistics. Assuming the CSV is named under "leaguedata":
 
 ```{r}
 library(ggplot2)
@@ -48,9 +52,10 @@ library(ggplot2)
 ggplot(leaguedata, aes(x = Pick.., y = Ban..)) +
   geom_point(color = "orange") +
   geom_smooth(method = "lm", color = "red") +
-  ggtitle("Correlation Between Win % VS Ban %") +
-  xlab("Win %") +
-  ylab("Ban %")
+  ggtitle("Correlation Between Pick % VS Ban %") +
+  xlab("Pick %") +
+  ylab("Ban %") +
+  theme_minimal()
 ```
 <sub><sup> ❗When importing the CSV into R Statistics utilize the function read.csv2(...) rather than read.csv(...) for proper formating.
 </sub></sup><line>
@@ -58,7 +63,7 @@ ggplot(leaguedata, aes(x = Pick.., y = Ban..)) +
 
 Output:
 
-<img width="737" alt="Screenshot 2024-12-15 at 10 09 50 PM" src="https://github.com/user-attachments/assets/edfc32a1-482c-45bf-9937-f2ebf61c7482" /> <space>
+<img width="700" alt="Screenshot 2024-12-15 at 10 29 27 PM" src="https://github.com/user-attachments/assets/96087ba9-86da-4cdc-8971-d106ea9eb5fa" /> <space>
 
 As assumed, there is a moderate positive relationship visualized but not a strong one. There are a few visible outliers, however to reduce the risk of losing valuable data and information outliers will not be removed. 
 
@@ -91,11 +96,21 @@ Output:
 
 <img width="554" alt="Screenshot 2024-12-15 at 10 20 17 PM" src="https://github.com/user-attachments/assets/fcb20c27-5883-48ce-958d-587f08426905" /> <space>
 
-Alternatively, correlation coefficiants can also be calculated using the `COR(...)` function within R Statistics.
+Alternatively, correlation coefficiants can also be calculated using the `COR(...)` function within R Statistics. 
 
 ```{r}
 correlation <- cor(leaguedata$Win.., leaguedata$Ban.., method = "pearson")
 ```
+The Pearson Coefficiant Correlation is *r* = 0.09024683. This indicates a really weak positive relationship between the `Win %` and `Ban %`, such that ban rates do not have a meaningful impact on win rates. Let's check the scatterplot. Modifying the R code from the previous analysis gets the following plot:
+
+<img width="718" alt="Screenshot 2024-12-15 at 10 34 13 PM" src="https://github.com/user-attachments/assets/f8129816-9399-4c5e-bc5c-1ad80434c58b" /> <space>
+
+The plot supports the findings. Since the correlation is positive, there is a slight upward trend but the line of best fit is relatively flat considering the correlation is weak, almost 0, with data points fairly dispersed. 
+
+***
+
+
+
 
 
 
