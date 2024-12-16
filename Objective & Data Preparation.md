@@ -2,7 +2,7 @@
 ### Data-Driven Insights into Champion Pick, Ban, and Win Rates in Competitive Gaming
 ## ❗Objective 
 
-In this project I want to ask the three following questions: 
+In this project I want to answer the three following questions: 
 
 - What is the correlation between pick rates and ban rates in patch 13.3 ranked games? Do higher pick rates equal higher ban rates? 
 
