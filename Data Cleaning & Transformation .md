@@ -19,7 +19,7 @@ Important to note that some champions contain more than one statistic correlatin
 <img width="510" alt="Screenshot 2024-12-15 at 9 15 43 PM" src="https://github.com/user-attachments/assets/72b5f051-4941-46d8-ad52-4af6be3407ff" />  <space>
 
 
-When exploring the dataset farther it can be seen that the variables `win %`, `pick %`, `ban %`, and `role %` are actually strings and not floats. This will make these values incompatable for future calculations and therefore must be transformed before further analysis. 
+When exploring the dataset farther it can be seen that the variables `win %`, `pick %`, `ban %`, and `role %` are actually strings and not floats. This will make these values incompatable for future calculations and therefore must be transformed before farther analysis. 
 First, let’s update the dataset to remove the ‘%’ from the values and then modify the columns. 
 
 ```sql
@@ -52,5 +52,5 @@ Once the columns have been modified, the `DESCRIBE` function can be utilized to 
 <img width="520" alt="Screenshot 2024-12-15 at 9 37 35 PM" src="https://github.com/user-attachments/assets/a54a6fe7-6fb8-4637-bc1d-b7f21ce1c631" /> <space>
 
 
-Notice that the '%' signs have also been removed. The dataset is now ready for further analysis. 
+Notice that the '%' signs have also been removed. The dataset is now ready for farther analysis. 
 ***
