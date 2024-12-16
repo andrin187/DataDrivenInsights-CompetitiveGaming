@@ -110,7 +110,7 @@ The Pearson Coefficiant Correlation is *r* = 0.09024683. This indicates a really
 The plot supports the findings. Since the correlation is positive, there is a slight upward trend but the line of best fit is relatively flat considering the correlation is weak, almost 0, with data points fairly dispersed. 
 
 ***
-## 📌 Champion Scores Relationship with Win % ?
+## 📌 Champion `Scores` Relationship with `Win %` ?
 
 High `Tier` champions have higher `Scores` and are therefore expected to have higher `Win %`. Let's check if this is true:
 
