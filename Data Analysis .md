@@ -145,7 +145,7 @@ SELECT
     AVG(`Win %`) AS avg_win
 FROM `league_of_legends_champion_stats_13_13`
 GROUP BY Tier, Class, Role
-ORDER BY avg_win DESC
+ORDER BY avg_win DESC;
 `````
 Output of the top data:
 
