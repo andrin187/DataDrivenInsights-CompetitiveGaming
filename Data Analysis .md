@@ -159,7 +159,7 @@ WITH class_data AS (
         Class, 
         Role, 
         AVG(`Win %`) AS avg_win
-    FROM `league_of_legends_champion_stats _13_13`
+    FROM `league_of_legends_champion_stats_13_13`
     GROUP BY Tier, Class, Role
 ) 
 SELECT 
@@ -175,7 +175,39 @@ Output:
 
 <img width="101" alt="Screenshot 2024-12-15 at 11 14 39 PM" src="https://github.com/user-attachments/assets/7be3ef03-2c0c-4c7c-bfd8-4b3414a95d48" /> <space>
 
-Champions with the highest average `Win %` are mainly tanks and mages, with no assasin champions making the threshold; ADC role having the highest `Win %` average for mages, and the support role for tanks. 
+Champions with the highest average `Win %` are mainly tanks and mages, with no assasin champions making the threshold; ADC role having the highest `Win %` average for mages, and the support role for tanks. Let's see who these champions are: 
+
+```sql
+SELECT *
+FROM `league_of_legends_champion_stats_13_13`
+WHERE Tier = 'A' AND
+Role = 'ADC' AND
+Class = 'Mage';
+`````
+
+Output:
+
+<img width="477" alt="Screenshot 2024-12-15 at 11 26 45 PM" src="https://github.com/user-attachments/assets/1a8169be-c500-4fb1-aa96-033ccc8c1c4b" /> <space>
+
+```sql
+SELECT *
+FROM `league_of_legends_champion_stats_13_13`
+WHERE Tier = 'A' AND
+Role = 'MID' AND
+Class = 'Tank';
+`````
+
+Output:
+
+<img width="460" alt="Screenshot 2024-12-15 at 11 28 10 PM" src="https://github.com/user-attachments/assets/30aacc56-281d-4241-adc6-365b3617caae" /> <space>
+
+It can be seen that champions that hold the highest average `Win %` are champions in off-meta roles; champions that have high `Win %` despite having relatively low overall scores. 
+
+***
+Now that the analysis is complete, here are the conclusions that can be derived from the analysis: Conclusions
+***
+
+
 
 
 
