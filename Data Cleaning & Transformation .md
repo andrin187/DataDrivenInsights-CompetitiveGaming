@@ -47,7 +47,7 @@ MODIFY COLUMN `Ban %` DOUBLE;
 
 DESCRIBE `league_of_legends_champion_stats_13_13`
 `````
-Once the columns have been modified, the DESCRIBE function can be utilized to double check that the variables `win %`, `pick %`, `ban %`, and `role %` are now 'double' variables. At this point, the dataset should treat the modified variables as floats and can be tested by ordering `win %` in descending order to get the following top 3 results: 
+Once the columns have been modified, the `DESCRIBE` function can be utilized to double check that the variables `win %`, `pick %`, `ban %`, and `role %` are now 'double' variables. At this point, the dataset should treat the modified variables as floats and can be tested by ordering `win %` in descending order to get the following top 3 results: 
 
 <img width="520" alt="Screenshot 2024-12-15 at 9 37 35 PM" src="https://github.com/user-attachments/assets/a54a6fe7-6fb8-4637-bc1d-b7f21ce1c631" /> <space>
 
