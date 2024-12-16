@@ -112,6 +112,47 @@ The plot supports the findings. Since the correlation is positive, there is a sl
 ***
 ## 📌 What Traits Distinguish Champion Win Rates?
 
+High `Tier` champions are expected to have higher `Win %`. Let's check if this is true:
+
+```sql
+SELECT 
+    Tier,
+    AVG(`Win %`) AS avg_win,
+    AVG(`Pick %`) AS avg_pick,
+    AVG(`Ban %`) AS avg_ban,
+    AVG(KDA) AS avg_kda,
+    AVG(Score) AS avg_score
+FROM `league_of_legends_champion_stats_13_13`
+GROUP BY Tier
+ORDER BY avg_win DESC;
+`````
+Output:
+
+<img width="623" alt="Screenshot 2024-12-15 at 10 56 18 PM" src="https://github.com/user-attachments/assets/3aa0bb65-05d9-4ba5-971f-74c593a469e9" /> <space>
+
+Champions in A tier, and B tier have higher win averages despite God tier and S tier champions having the highest overall score. It can also be seen that God and S tier champs have the highest `Pick %` and at the same time the highest `Ban %`, supporting the findings from earlier. Let’s visualize the findings in R: 
+
+<img width="698" alt="Screenshot 2024-12-15 at 11 00 33 PM" src="https://github.com/user-attachments/assets/d8ec3761-e8a4-4cec-a8d9-a3361f67f45f" /> <space>
+
+Average `Scores`, `Ban %`, `Pick %`, decrease as `Tiers` decrease; average `Win %` is not influenced from this decrease. Let's analyze further: 
+
+```sql
+SELECT 
+    Tier, 
+    Class, 
+    Role, 
+    AVG(`Win %`) AS avg_win
+FROM `league_of_legends_champion_stats _13_13`
+GROUP BY Tier, Class, Role
+ORDER BY avg_win DESC
+`````
+Output of the top data:
+
+<img width="283" alt="Screenshot 2024-12-15 at 11 05 41 PM" src="https://github.com/user-attachments/assets/182e8708-d640-4673-aed4-781c0ea449eb" /> <space>
+
+
+
+
 
 
 
