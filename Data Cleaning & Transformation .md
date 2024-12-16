@@ -52,5 +52,5 @@ Once the columns have been modified, the DESCRIBE function can be utilized to do
 <img width="520" alt="Screenshot 2024-12-15 at 9 37 35 PM" src="https://github.com/user-attachments/assets/a54a6fe7-6fb8-4637-bc1d-b7f21ce1c631" /> <space>
 
 
-Notice that the '%' signs have also removed. The dataset is now ready for further analysis. 
+Notice that the '%' signs have also been removed. The dataset is now ready for further analysis. 
 ***
