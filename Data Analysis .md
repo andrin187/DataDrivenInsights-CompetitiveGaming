@@ -2,7 +2,7 @@
 ## 📚Table of Contents
 - [Exploring Pick % and Ban % Correlation](#-exploring-pick--and-ban--correlation)
 - [Exploring Win % and Ban % Correlation](#-exploring-win--and-ban--correlation)
-- [What Traits Distinguish Champion Win Rates?](#what-traits-distinguish-champion-win-rates)
+- [What Traits Distinguish Champion Win Rates?](#-what-traits-distinguish-champion-win-rates)
 
 ***
 ## 📌 Exploring `Pick %` and `Ban %` Correlation
