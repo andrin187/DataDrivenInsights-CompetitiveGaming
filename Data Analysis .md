@@ -33,10 +33,14 @@ SUM(YSQUARED) as sum_ysquared,
 SUM(XSQUARED) as sum_xsquared
 FROM correlation;
 `````
+Output:
+
+<img width="614" alt="Screenshot 2024-12-15 at 10 08 47 PM" src="https://github.com/user-attachments/assets/b557b1ff-631f-419d-9798-dfdc60a13e2e" /> <space>
+
 
 Plugging the following values into the formula we get the following Pearson Correlation Coefficient, *r* = 0.4814065.  Thus, there is a moderate positive relationship (0.3< *r* <0.5) between pick rates and ban rates; champions with high pick rates tend to have higher ban rates.
 
-A useful way to visualize this relationship can be done using R statistics:
+A useful way to visualize this relationship can be done using R Statistics:
 
 ```{r}
 library(ggplot2)
@@ -48,5 +52,50 @@ ggplot(leaguedata, aes(x = Pick.., y = Ban..)) +
   xlab("Win %") +
   ylab("Ban %")
 ```
+<sub><sup> ❗When importing the CSV into R Statistics utilize the function read.csv2(...) rather than read.csv(...) for proper formating.
+</sub></sup><line>
+<sub><sup> Data cleaning will need to be done and variables will need to be properly converted before plotting. </sub></sup>
+
+Output:
+
+<img width="737" alt="Screenshot 2024-12-15 at 10 09 50 PM" src="https://github.com/user-attachments/assets/edfc32a1-482c-45bf-9937-f2ebf61c7482" /> <space>
+
+As assumed, there is a moderate positive relationship visualized but not a strong one. There are a few visible outliers, however to reduce the risk of losing valuable data and information outliers will not be removed. 
+
+***
+## 📌 Exploring `Win %` and `Ban %` Correlation
+
+A similar approach can be followed as the previous analysis. 
+
+```sql
+WITH correlation AS (
+	SELECT 
+    `Win %`,
+    `Ban %`,
+    (`Win %` * `Ban %`) AS XY,
+    (`Win %` * `Win %`) AS XSQUARED, 
+    (`Ban %` * `Ban %`) AS YSQUARED
+    FROM `league_of_legends_champion_stats_13_13`
+    )
+    
+SELECT 
+COUNT(*) AS n,
+SUM(`Win %`) AS sum_x,
+SUM(`Ban %`) AS sum_y, 
+SUM(XY) AS sum_xy,
+SUM(YSQUARED) as sum_ysquared,
+SUM(XSQUARED) as sum_xsquared
+FROM correlation
+`````
+Output:
+
+<img width="554" alt="Screenshot 2024-12-15 at 10 20 17 PM" src="https://github.com/user-attachments/assets/fcb20c27-5883-48ce-958d-587f08426905" /> <space>
+
+Alternatively, correlation coefficiants can also be calculated using the `COR(...)` function within R Statistics.
+
+```{r}
+correlation <- cor(leaguedata$Win.., leaguedata$Ban.., method = "pearson")
+```
+
 
 
